@@ -20,10 +20,10 @@ key = base64.urlsafe_b64encode(kdf.derive(password)) # setting the key
 
 def encrypt(string):
     encoded = string.encode()
-    f = Fernet(key)
+    f = Fernet(key)                     #func to encrypt
     encrypted = f.encrypt(encoded)
     return encrypted
 
 def decrypt(string):
-    f = Fernet(key)
+    f = Fernet(key)                 #func to decrypt
     return f.decrypt(string)
